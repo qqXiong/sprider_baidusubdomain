@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # sprider_baidusudomains
 
 目前可用条件：
@@ -33,5 +34,4 @@
             )
 > * 
 > * web.py 获取页面的路径
-
 
