@@ -26,7 +26,9 @@ class Combosel(QtWidgets.QWidget):
         self.ui_sel = Ui_Form()
         self.ui_sel.setupUi(self)
 
+        # 获取数据的顶级域名
         self.topdomain = get_topdomain()
+
 
         self.ui_sel.topDomain.clear()
         self.ui_sel.topDomain.addItem(u'请选择')
@@ -34,10 +36,12 @@ class Combosel(QtWidgets.QWidget):
         for val in self.topdomain:
             self.ui_sel.topDomain.addItem(val)
 
+
+
         self.site = []
 
         # 连接自己的槽函数
-        self.ui_sel.pushButton.clicked.connect(self.onActivatedpushButton)
+        self.ui_sel.okButton.clicked.connect(self.onActivatedpushButton)
 
     def get_html(self, keyword, count, list):
         print(keyword)
